@@ -1,0 +1,24 @@
+{
+  "name": "hotel-plaza-real",
+  "version": "1.0.0",
+  "description": "Hotel plaza real official website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hotel",
+    "javascript",
+    "webpack",
+    "sass"
+  ],
+  "author": "disto-stack",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars-webpack-plugin": "^2.2.1",
+    "sass": "^1.45.2",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

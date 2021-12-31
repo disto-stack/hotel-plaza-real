@@ -16,6 +16,14 @@ module.exports = {
         path: `${__dirname}/dist/javascript`,
         clean: true
     },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: ["style-loader", "css-loader", "sass-loader"]
+            }
+        ]
+    },
     plugins: [
         new HandlebarsWebpackPlugin({
             entry: path.join(process.cwd(), 'src', '**', '*.hbs'),

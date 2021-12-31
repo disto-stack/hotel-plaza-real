@@ -4,6 +4,7 @@
   "description": "Hotel plaza real official website",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.common.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,7 +16,9 @@
   "author": "disto-stack",
   "license": "ISC",
   "devDependencies": {
+    "handlebars-loader": "^1.7.1",
     "handlebars-webpack-plugin": "^2.2.1",
+    "html-webpack-plugin": "^4.5.2",
     "sass": "^1.45.2",
     "sass-loader": "^12.4.0",
     "webpack": "^5.65.0",

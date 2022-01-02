@@ -1,10 +1,10 @@
 const path = require('path')
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
     entry: {
         index: './src/javascript/index.js',
         about: './src/javascript/about.js',
@@ -19,8 +19,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                test: /\.(c|sc|sa)ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    }, 
+                    "css-loader", 
+                    "sass-loader"
+                ]
             }
         ]
     },
@@ -31,6 +37,9 @@ module.exports = {
             partials: [
                 path.join(process.cwd(), 'src', 'pages', 'partials', '*.hbs')
             ]
+        }),
+        new MiniCssExtractPlugin({
+            filename: '../main.css'
         })
     ]
 }

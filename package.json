@@ -19,6 +19,7 @@
     "handlebars-loader": "^1.7.1",
     "handlebars-webpack-plugin": "^2.2.1",
     "html-webpack-plugin": "^4.5.2",
+    "mini-css-extract-plugin": "^2.4.5",
     "sass": "^1.45.2",
     "sass-loader": "^12.4.0",
     "webpack": "^5.65.0",

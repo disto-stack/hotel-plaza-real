@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 13
+    },
+    "rules": {
+        "quotes": ["error", "double"],
+        "func-style": ["error", "expression"],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "indent": ["error", "tab"],
+        "semi": [2, "never"],
+        "no-var": "error",
+        "space-before-blocks": "error",
+        "no-eval": "error",
+        "arrow-spacing": "error",
+        "camelcase": "warn",
+        "max-len": ["warn", 80],
+        "prefer-const": "warn",
+        "prefer-destructuring": "warn",
+        "prefer-template": "warn",
+        "space-in-parens": "warn",
+        "no-unused-vars": "warn",
+        "no-unused-expressions": "warn",
+        "no-alert": "warn",
+        "no-console": "warn",
+        "yoda": "warn"
+    }
+}

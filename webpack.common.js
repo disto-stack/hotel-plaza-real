@@ -18,8 +18,8 @@ module.exports = {
     },
     module: {
         rules: [
-            { 
-                test: /\.handlebars$/, 
+            {
+                test: /\.handlebars$/,
                 loader: "handlebars-loader",
                 options: {
                     partialDirs: [
@@ -30,12 +30,21 @@ module.exports = {
             {
                 test: /\.(c|sc|sa)ss$/,
                 use: [
-                    "style-loader", 
+                    "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             }
-            
         ]
     },
     plugins: [
@@ -46,17 +55,17 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'pages', 'about.handlebars'),
-            filename: path.join(__dirname, 'dist', 'pages', 'about.html'),
+            filename: path.join(__dirname, 'dist', 'about.html'),
             chunks: ['index', 'about']
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'pages', 'gallery.handlebars'),
-            filename: path.join(__dirname, 'dist', 'pages', 'gallery.html'),
+            filename: path.join(__dirname, 'dist', 'gallery.html'),
             chunks: ['index', 'gallery']
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'pages', 'contact.handlebars'),
-            filename: path.join(__dirname, 'dist', 'pages', 'contact.html'),
+            filename: path.join(__dirname, 'dist', 'contact.html'),
             chunks: ['index', 'contact']
         })
     ]
